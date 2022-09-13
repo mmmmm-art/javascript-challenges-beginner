@@ -11,6 +11,7 @@
 
 // you can log out to the console or to the output container like this:
 // output.innerText = "My output";
+<pre id="output-container"></pre>
 if (!output) throw "Output container not found.";
 
 //@ts-check
