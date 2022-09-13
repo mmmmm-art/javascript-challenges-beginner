@@ -11,29 +11,28 @@
 
 // you can log out to the console or to the output container like this:
 // output.innerText = "My output";
-<pre id="output-container"></pre>
+const output = document.getElementById("output-container");
 if (!output) throw "Output container not found.";
 
 //@ts-check
 // your code starts after this line
-
 function tableCreate(row, col) {
 	let body = document.body;
 	let tbl = document.createElement("table");
 	tbl.style.width = "200px";
 	tbl.style.border = "1px solid black";
 
-	for (let i = 1; i < row; i++) {
+	for (let i = 0; i < row; i++) {
 		let tr = tbl.insertRow();
-		for (let j = 1; j < col; j++) {
+		for (let j = 0; j < col; j++) {
 			let td = tr.insertCell();
-			td.appendChild(document.createTextNode(`${i*j}`));
+			td.appendChild(document.createTextNode(`${i * j}`));
 			td.style.border = "1px solid black";
 		}
 	}
 	body.appendChild(tbl);
 }
 
-tableCreate(41,41);
+tableCreate(410, 410);
 
 //solved
