@@ -11,7 +11,21 @@
 // you can log out to the console or to the output container like this:
 // output.innerText = "My output";
 const output = document.getElementById("output-container");
+const output2 = document.getElementById("output-container2");
+const input = document.getElementById("input");
+const button = document.getElementById("Push");
+const calc = document.getElementById("why?");
 if (!output) throw "Output container not found.";
 
 //@ts-check
 // your code starts after this line
+
+button.addEventListener("click", (b) => {
+	output.innerText = String(input.value);
+});
+
+calc.addEventListener("click", (b) => {
+	output2.innerText =  output.innerText.replace(' ', '');
+});
+
+//Solved
