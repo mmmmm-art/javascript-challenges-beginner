@@ -23,3 +23,9 @@ const input = document.getElementById("kilometers");
 const button = document.getElementById("calculate");
 
 // your code starts after this line
+
+button.addEventListener("click", (b) => {
+	output.innerText = input.value * 0.621371;
+});
+
+//solved

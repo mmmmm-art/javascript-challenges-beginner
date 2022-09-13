@@ -16,7 +16,26 @@
 // you can log out to the console or to the output container like this:
 // output.innerText = "My output";
 const output = document.getElementById("output-container");
+const output2 = document.getElementById("output-container2");
+const input = document.getElementById("input");
+const button = document.getElementById("Push");
+const calc = document.getElementById("Calculate");
 if (!output) throw "Output container not found.";
 
 //@ts-check
 // your code starts after this line
+let nums = [];
+let sum = 0;
+button.addEventListener("click", (b) => {
+	nums.push(Number(input.value));
+	sum = 0
+	output.innerText = nums;
+});
+calc.addEventListener("click", (b) => {
+	for (let i = 0; i < nums.length; i++) {
+		sum += nums[i];
+	}
+	output2.innerText = sum;
+});
+
+//solved

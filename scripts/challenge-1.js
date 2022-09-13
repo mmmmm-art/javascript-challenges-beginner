@@ -15,3 +15,18 @@ if (!output) throw "Output container not found.";
 
 //@ts-check
 // your code starts after this line
+
+let num = 0;
+let nums = [];
+
+function animate() {
+	nums.push(num);
+	num += 2;
+
+	output.innerText = nums;
+	requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
+
+//solved
